@@ -122,6 +122,7 @@ class MyProfileFragment : Fragment() {
             val social = view.findViewById<LinearLayoutCompat>(R.id.social)
             val privacy = view.findViewById<LinearLayoutCompat>(R.id.privacy)
             val logout = view.findViewById<LinearLayoutCompat>(R.id.logout)
+            val share = view.findViewById<LinearLayoutCompat>(R.id.share)
 
             val bottomSheetDialog =
                 BottomSheetDialog(requireContext(), R.style.bottom_sheet_dialog_theme)
@@ -134,6 +135,20 @@ class MyProfileFragment : Fragment() {
                 startActivity(
                     Intent(requireContext(), SettingsActivity::class.java)
                         .putExtra("users", users)
+                )
+            }
+
+            edit.setOnClickListener {
+                bottomSheetDialog.dismiss()
+                startActivity(
+                    Intent.createChooser(
+                        Intent().apply {
+                            action = Intent.ACTION_SEND
+                            putExtra(Intent.EXTRA_TEXT, "https://utripod.page.link/user/${users.username}")
+                            type = "text/plain"
+                        },
+                        "Share to"
+                    )
                 )
             }
 

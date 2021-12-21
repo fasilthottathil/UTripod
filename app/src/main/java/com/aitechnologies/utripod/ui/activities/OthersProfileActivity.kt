@@ -4,10 +4,10 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.view.View.INVISIBLE
-import android.view.View.VISIBLE
+import android.view.View.*
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.lifecycle.ViewModelProvider
 import com.aitechnologies.utripod.R
 import com.aitechnologies.utripod.adapters.ProfileTabAdapter
@@ -18,10 +18,14 @@ import com.aitechnologies.utripod.repository.ChatsRepository
 import com.aitechnologies.utripod.repository.UserRepository
 import com.aitechnologies.utripod.ui.viewModels.OthersProfileViewModel
 import com.aitechnologies.utripod.ui.viewModels.OthersProfileViewModelProvider
+import com.aitechnologies.utripod.util.AppSharedPreference.Companion.getUsername
 import com.aitechnologies.utripod.util.AppUtil
+import com.aitechnologies.utripod.util.AppUtil.Companion.dismissProgress
+import com.aitechnologies.utripod.util.AppUtil.Companion.shortToast
 import com.aitechnologies.utripod.util.AppUtil.Companion.showProgress
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
@@ -111,6 +115,11 @@ class OthersProfileActivity : AppCompatActivity() {
             }
         })
 
+        othersProfileViewModel.blockOrUnblock.observe(this,{
+            shortToast(it)
+            dismissProgress()
+        })
+
         binding.txtFollow.setOnClickListener {
             showLoading()
             othersProfileViewModel.followOrUnfollow(users.username)
@@ -137,21 +146,39 @@ class OthersProfileActivity : AppCompatActivity() {
             viewLink(socialLinks.youtube.toString())
         }
 
-        binding.imgShare.setOnClickListener {
-            startActivity(
-                Intent.createChooser(
-                    Intent().apply {
-                        action = Intent.ACTION_SEND
-                        putExtra(Intent.EXTRA_TEXT, "https://utripod.page.link/user/${users.username}")
-                        type = "text/plain"
-                    },
-                    "Share to"
+        binding.menu.setOnClickListener {
+            val bottomSheetDialog = BottomSheetDialog(this,R.style.bottom_sheet_dialog_theme)
+            val view = inflate(this,R.layout.others_settings_bottom_sheet,null)
+            val share = view.findViewById<LinearLayoutCompat>(R.id.share)
+            val block = view.findViewById<LinearLayoutCompat>(R.id.block)
+
+            bottomSheetDialog.setContentView(view)
+            bottomSheetDialog.show()
+
+            share.setOnClickListener {
+                bottomSheetDialog.dismiss()
+                startActivity(
+                    Intent.createChooser(
+                        Intent().apply {
+                            action = Intent.ACTION_SEND
+                            putExtra(Intent.EXTRA_TEXT, "https://utripod.page.link/user/${users.username}")
+                            type = "text/plain"
+                        },
+                        "Share to"
+                    )
                 )
-            )
+            }
+
+            block.setOnClickListener {
+                bottomSheetDialog.dismiss()
+                showProgress("Loading...",false)
+                othersProfileViewModel.blockOrUnblock(users.username,getUsername())
+            }
+
         }
 
         othersProfileViewModel.usernameList.observe(this,{
-            AppUtil.dismissProgress()
+            dismissProgress()
             startActivity(Intent(this,ViewUsersActivity::class.java)
                 .putExtra("usernameList",it))
         })

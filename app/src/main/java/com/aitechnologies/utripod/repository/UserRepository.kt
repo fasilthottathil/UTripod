@@ -239,6 +239,30 @@ class UserRepository {
 
     }
 
+    suspend fun blockOrUnblock(
+        username: String,
+        myUsername: String
+    ): String {
+        val isBlocked = firebaseFirestore.collection(BLOCKED_USERS)
+            .document(myUsername)
+            .collection(BLOCKED_USERS)
+            .whereEqualTo("username", username)
+            .limit(1)
+            .get()
+            .await()
+
+        var result = ""
+
+        result = if (isBlocked.isEmpty) {
+            blockUser(myUsername, username)
+            "blocked"
+        } else {
+            unblockUser(myUsername, username)
+            "unblocked"
+        }
+        return result
+    }
+
 
     suspend fun getUserByPhone(phone: String): List<Users> {
         if (firebaseAuth.currentUser == null)
@@ -445,7 +469,7 @@ class UserRepository {
                     firebaseFirestore.collection(FOLLOWERS)
                         .document(username)
                         .collection(FOLLOWERS)
-                        .whereEqualTo("username",application.getUsername())
+                        .whereEqualTo("username", application.getUsername())
                         .limit(1)
                         .get()
                         .addOnSuccessListener {
@@ -487,10 +511,10 @@ class UserRepository {
             .get()
             .await()
 
-        val followingList:ArrayList<String> = arrayListOf()
+        val followingList: ArrayList<String> = arrayListOf()
 
-        return if (followings.isEmpty) arrayListOf() else{
-            for (doc in followings.documents){
+        return if (followings.isEmpty) arrayListOf() else {
+            for (doc in followings.documents) {
                 followingList.add(doc.data!!["username"].toString())
             }
             followingList
@@ -507,10 +531,10 @@ class UserRepository {
             .get()
             .await()
 
-        val followingList:ArrayList<String> = arrayListOf()
+        val followingList: ArrayList<String> = arrayListOf()
 
-        return if (followings.isEmpty) arrayListOf() else{
-            for (doc in followings.documents){
+        return if (followings.isEmpty) arrayListOf() else {
+            for (doc in followings.documents) {
                 followingList.add(doc.data!!["username"].toString())
             }
             followingList
@@ -520,20 +544,20 @@ class UserRepository {
 
 
     @ExperimentalCoroutinesApi
-    suspend fun getOnlineUsers(usernameList: ArrayList<String>):Flow<ArrayList<String>>{
+    suspend fun getOnlineUsers(usernameList: ArrayList<String>): Flow<ArrayList<String>> {
         return callbackFlow {
             firebaseFirestore.collection(CONNECTION)
-                .whereIn("username",usernameList)
-                .whereEqualTo("isOnline",true)
+                .whereIn("username", usernameList)
+                .whereEqualTo("isOnline", true)
                 .get()
                 .addOnSuccessListener {
-                    val list:ArrayList<String> = arrayListOf()
-                    for (doc in it){
+                    val list: ArrayList<String> = arrayListOf()
+                    for (doc in it) {
                         list.add(doc.data["username"].toString())
                     }
                     trySend(list)
                 }
-            awaitClose {  }
+            awaitClose { }
         }
     }
 

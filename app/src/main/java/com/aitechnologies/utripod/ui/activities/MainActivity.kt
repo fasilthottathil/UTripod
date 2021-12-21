@@ -17,6 +17,7 @@ import com.aitechnologies.utripod.services.OfflineService
 import com.aitechnologies.utripod.ui.viewModels.MainProvider
 import com.aitechnologies.utripod.ui.viewModels.MainViewModel
 import com.aitechnologies.utripod.util.AppUtil.Companion.shortToast
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         setupViewPager()
         setupBottomNav()
@@ -111,6 +113,7 @@ class MainActivity : AppCompatActivity() {
         binding.layoutAdd.visibility = INVISIBLE
         binding.viewpager.setCurrentItem(position, false)
     }
+
 
 
     private fun setupViewPager() {

@@ -27,6 +27,7 @@ class OthersProfileViewModel(
     val roomId = MutableLiveData<Chats>()
     val linkList = MutableLiveData<List<SocialLinks>>()
     val usernameList = MutableLiveData<ArrayList<String>>()
+    val blockOrUnblock = MutableLiveData<String>()
 
     @ExperimentalCoroutinesApi
     fun isFollowing(username: String) {
@@ -64,6 +65,15 @@ class OthersProfileViewModel(
     fun getFollowings(username:String){
         viewModelScope.launch {
             usernameList.value = userRepository.getMyFollowings(username)
+        }
+    }
+
+    fun blockOrUnblock(
+        username:String,
+        myUsername:String
+    ){
+        viewModelScope.launch {
+            blockOrUnblock.value = userRepository.blockOrUnblock(username, myUsername)
         }
     }
 
