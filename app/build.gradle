@@ -1,0 +1,128 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 31
+
+
+    defaultConfig {
+        applicationId "com.aitechnologies.utripod"
+        minSdk 24
+        targetSdk 31
+        versionCode 400000000
+        versionName "1.0.01"
+        multiDexEnabled = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures{
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    def lifecycle_version = "2.4.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-dynamic-links'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+
+    //retrofit
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //razorpay
+    implementation 'com.razorpay:checkout:1.6.12'
+
+    //giphy
+    implementation 'com.giphy.sdk:ui:2.1.7'
+
+    //emoji
+    implementation 'com.vanniktech:emoji-google:0.7.0'
+
+    //fb-shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //exoplayer
+    def exo_version = "2.16.1"
+    implementation "com.google.android.exoplayer:exoplayer:$exo_version"
+    implementation "com.google.android.exoplayer:exoplayer-core:2.16.1"
+    implementation "com.google.android.exoplayer:exoplayer-dash:$exo_version"
+    implementation "com.google.android.exoplayer:exoplayer-hls:$exo_version"
+    implementation "com.google.android.exoplayer:exoplayer-smoothstreaming:$exo_version"
+    implementation "com.google.android.exoplayer:exoplayer-ui:2.16.1"
+
+    //ffmpeg
+    implementation 'com.arthenica:mobile-ffmpeg-min:4.4'
+
+    //trim
+    implementation 'com.github.a914-gowtham:android-video-trimmer:1.7.0'
+
+    //gpu video
+    implementation 'com.github.MasayukiSuda:GPUVideo-android:v0.1.1'
+
+    //volley
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //video compressor
+    implementation 'com.github.AbedElazizShe:LightCompressor:1.0.0'
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //memory_leak_finder
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    //photoView-zoom
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+}

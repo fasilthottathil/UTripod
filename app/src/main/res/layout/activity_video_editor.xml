@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/balck"
+    tools:context=".uvis.activities.VideoEditorActivity">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:use_controller="true" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/processing"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_circular" />
+
+    <ImageView
+        android:id="@+id/imgDone"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_margin="12sp"
+        android:background="@drawable/round_white"
+        android:contentDescription="@string/app_name"
+        android:padding="5dp"
+        android:src="@drawable/ic_baseline_done_24"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grey" />
+
+    <ImageView
+        android:id="@+id/imgCrop"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_margin="12sp"
+        android:background="@drawable/round_white"
+        android:contentDescription="@string/app_name"
+        android:padding="5dp"
+        android:src="@drawable/ic_baseline_content_cut_24"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/imgDone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grey" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.fragments.AddFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="enterAlways"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/notification"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgTrending"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12sp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/trending"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgNotification"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        android:background="@drawable/round_image"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:layout_margin="12sp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/btnPost"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="@id/imgProfile"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnPost"
+        android:layout_width="100dp"
+        android:layout_height="45sp"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/notification_online"
+        app:cardCornerRadius="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/post"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPost">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgPost"
+                android:layout_width="0dp"
+                android:layout_height="155dp"
+                android:layout_margin="12sp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtPost"
+                android:layout_width="0dp"
+                android:layout_height="155dp"
+                android:layout_margin="12sp"
+                android:autofillHints="@null"
+                android:background="@drawable/post_input_shape"
+                android:gravity="start"
+                android:hint="@string/what_s_on_your_mind"
+                android:inputType="textMultiLine"
+                android:padding="12sp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgPost" />
+
+
+            <EditText
+                android:id="@+id/edtHashTags"
+                android:layout_width="0dp"
+                android:layout_height="100sp"
+                android:layout_margin="12sp"
+                android:autofillHints="@null"
+                android:background="@drawable/post_input_shape"
+                android:gravity="start"
+                android:hint="@string/tags"
+                android:inputType="textMultiLine"
+                android:padding="12sp"
+                android:textColor="@color/notification_online"
+                android:textColorHint="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtPost" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/promote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginTop="5dp"
+                android:text="@string/promote"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtHashTags" />
+
+            <ImageView
+                android:id="@+id/txtUploadImage"
+                android:layout_width="200sp"
+                android:layout_height="35sp"
+                android:layout_margin="12sp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/upload_i"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/promote" />
+
+            <ImageView
+                android:id="@+id/txtUploadVideo"
+                android:layout_width="200sp"
+                android:layout_height="35sp"
+                android:layout_margin="8sp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/upload_v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtUploadImage" />
+
+            <TextView
+                android:id="@+id/txtTag"
+                android:layout_width="150sp"
+                android:layout_height="35sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_tag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtUploadVideo" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTag" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

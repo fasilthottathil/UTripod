@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "1037086220880",
+    "firebase_url": "https://utripod-c5add-default-rtdb.firebaseio.com",
+    "project_id": "utripod-c5add",
+    "storage_bucket": "utripod-c5add.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037086220880:android:5faaf9bbc7b59e113a6755",
+        "android_client_info": {
+          "package_name": "com.aitechnologies.utripod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037086220880-cq6npiol6kg3tkbgifcqf64rfn3l8gm0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aitechnologies.utripod",
+            "certificate_hash": "94ed6591821e75958dc9ad2758d0994806476044"
+          }
+        },
+        {
+          "client_id": "1037086220880-d4jtf3kscsipmlu8u91bmamshvthom5e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aitechnologies.utripod",
+            "certificate_hash": "9fc0b5c8ce33d60772171af9274fa2703df549fa"
+          }
+        },
+        {
+          "client_id": "1037086220880-o2suor54rbisviupc0q5a6a0li1iqhf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aitechnologies.utripod",
+            "certificate_hash": "59bf7836225e53deeac6c982094713d180435300"
+          }
+        },
+        {
+          "client_id": "1037086220880-prihg426cnig3or0q0an6s38ejoppvup.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aitechnologies.utripod",
+            "certificate_hash": "020a0e9a22f0068a33aa0a942aa8e1eca929a7eb"
+          }
+        },
+        {
+          "client_id": "1037086220880-bik3u5ah8s6npltjst893d7brkv1jd53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxjyIC62_0fKXQech1g4KtzlWfWg7xGps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037086220880-bik3u5ah8s6npltjst893d7brkv1jd53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037086220880:android:826e72c60ec45e303a6755",
+        "android_client_info": {
+          "package_name": "com.gm.utripod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037086220880-bik3u5ah8s6npltjst893d7brkv1jd53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxjyIC62_0fKXQech1g4KtzlWfWg7xGps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037086220880-bik3u5ah8s6npltjst893d7brkv1jd53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037086220880:android:10b05b1aae05ebd63a6755",
+        "android_client_info": {
+          "package_name": "com.jandraid.utripodadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037086220880-bik3u5ah8s6npltjst893d7brkv1jd53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxjyIC62_0fKXQech1g4KtzlWfWg7xGps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037086220880-bik3u5ah8s6npltjst893d7brkv1jd53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

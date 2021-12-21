@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#131313</color>
+    <color name="colorPrimaryDark">#131313</color>
+    <color name="colorAccent">#DE264C</color>
+    <color name="balck">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#90949D</color>
+    <color name="video_ui">#186BFE</color>
+
+    <color name="tintcolor">#BBBCBD</color>
+    <color name="postcolor">#1F2128</color>
+    <color name="notification_online">#2F88FB</color>
+    <color name="active">#5fdba7</color>
+</resources>

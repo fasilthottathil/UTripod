@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".uvis.activities.EditUvisActivity">
+
+    <EditText
+        android:id="@+id/edtPost"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
+        android:layout_margin="12sp"
+        android:autofillHints="@null"
+        android:background="@drawable/post_input_shape"
+        android:gravity="start"
+        android:hint="@string/enter_description"
+        android:inputType="textMultiLine"
+        android:padding="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edtHashTags"
+        android:layout_width="0dp"
+        android:layout_height="100sp"
+        android:layout_margin="12sp"
+        android:autofillHints="@null"
+        android:background="@drawable/post_input_shape"
+        android:gravity="start"
+        android:hint="@string/tags"
+        android:inputType="textMultiLine"
+        android:padding="12sp"
+        android:textColor="@color/notification_online"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPost" />
+
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="0dp"
+        android:layout_height="45sp"
+        android:layout_margin="16sp"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:text="@string/update"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtHashTags" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

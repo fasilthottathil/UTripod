@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        android:background="@drawable/round_image"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/layoutUserMeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="@id/imgProfile">
+
+        <FrameLayout
+            android:id="@+id/spacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imgMore">
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/input_message"
+                android:backgroundTint="@color/active"
+                android:elevation="75sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/username"
+                android:textColor="@color/postcolor" />
+
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="?actionBarItemBackground"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/spacer"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/comment_shape"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/layoutUserMeta">
+
+        <com.giphy.sdk.ui.views.GPHMediaView
+            android:id="@+id/gifView"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/reply"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/itemContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

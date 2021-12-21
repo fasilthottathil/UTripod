@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    tools:context=".ui.activities.PhoneAuthenticationActivity">
+
+    <TextView
+        android:id="@+id/txtHead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:text="@string/an_otp_is_send_to_91_1234567890"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edtOtp"
+        android:layout_width="0dp"
+        android:layout_height="45sp"
+        android:layout_margin="16sp"
+        android:autofillHints="@null"
+        android:background="@drawable/form_input_shape"
+        android:gravity="center"
+        android:hint="@string/enter_otp"
+        android:inputType="number"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHead" />
+
+    <TextView
+        android:id="@+id/txtVerify"
+        android:layout_width="0dp"
+        android:layout_height="45sp"
+        android:layout_margin="16sp"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:text="@string/verify"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtOtp" />
+
+
+    <TextView
+        android:id="@+id/txtCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:text="@string/resends_in_30s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtVerify" />
+
+    <TextView
+        android:id="@+id/txtResend"
+        android:layout_width="100sp"
+        android:layout_height="45sp"
+        android:layout_margin="16sp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/video_ui"
+        android:gravity="center"
+        android:text="@string/resend"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtVerify" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

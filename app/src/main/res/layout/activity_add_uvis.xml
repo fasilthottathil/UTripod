@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".uvis.activities.AddUvisActivity">
+
+
+    <EditText
+        android:id="@+id/edtPost"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
+        android:layout_margin="12sp"
+        android:autofillHints="@null"
+        android:background="@drawable/post_input_shape"
+        android:gravity="start"
+        android:hint="@string/enter_description"
+        android:inputType="textMultiLine"
+        android:padding="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edtHashTags"
+        android:layout_width="0dp"
+        android:layout_height="100sp"
+        android:layout_margin="12sp"
+        android:autofillHints="@null"
+        android:background="@drawable/post_input_shape"
+        android:gravity="start"
+        android:hint="@string/tags"
+        android:inputType="textMultiLine"
+        android:padding="12sp"
+        android:textColor="@color/notification_online"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPost" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/promote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12sp"
+        android:layout_marginTop="5dp"
+        android:text="@string/promote"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtHashTags" />
+
+    <TextView
+        android:id="@+id/txtPost"
+        android:layout_width="0dp"
+        android:layout_height="45sp"
+        android:layout_margin="12sp"
+        android:background="#3F51B5"
+        android:gravity="center"
+        android:text="@string/post"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/promote" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

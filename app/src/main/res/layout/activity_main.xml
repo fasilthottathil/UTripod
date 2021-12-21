@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activities.MainActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutAdd"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="25dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutAdd"
+        android:layout_width="175sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/send_message_shape"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/imgAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:padding="12sp"
+            android:text="@string/post"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/ic_baseline_grid_on_24"
+            app:drawableTint="@color/white" />
+
+        <TextView
+            android:id="@+id/txtUvis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:padding="12sp"
+            android:text="@string/uvis"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/ic_baseline_music_video_24"
+            app:drawableTint="@color/white" />
+
+        <TextView
+            android:id="@+id/txtCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:padding="12sp"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/gph_ic_close"
+            app:drawableTint="@color/colorAccent" />
+
+    </LinearLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/orderPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#651C4D"
+            app:tint="#fff"
+            app:backgroundTint="#651C4D"
+            app:fabSize="normal"
+            app:layout_anchor="@id/bottomNav"
+            app:layout_anchorGravity="center"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomNav"
+            style="@style/Theme.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:theme="@style/Theme.MaterialComponents"
+            app:backgroundTint="@color/postcolor"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabCradleVerticalOffset="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgHome"
+                    android:layout_width="0dp"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/home" />
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/search" />
+
+                <View
+                    android:layout_width="55sp"
+                    android:layout_height="55sp" />
+
+                <ImageView
+                    android:id="@+id/imgChats"
+                    android:layout_width="0dp"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/chat" />
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/profile" />
+            </LinearLayout>
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/imgAdd"
+        android:layout_width="55sp"
+        android:layout_height="55sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layoutBottom"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

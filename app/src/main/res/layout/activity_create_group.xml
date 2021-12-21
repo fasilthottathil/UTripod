@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activities.CreateGroupActivity">
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:background="?actionBarItemBackground"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/create_group"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgBack"
+        app:layout_constraintStart_toEndOf="@id/imgBack"
+        app:layout_constraintTop_toTopOf="@id/imgBack" />
+
+    <ImageView
+        android:id="@+id/imgImage"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_image"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBack" />
+
+    <ImageView
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:alpha="0.50"
+        android:background="@drawable/round_image"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@id/imgImage"
+        app:layout_constraintEnd_toEndOf="@id/imgImage"
+        app:layout_constraintStart_toStartOf="@id/imgImage"
+        app:layout_constraintTop_toTopOf="@id/imgImage"/>
+
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="0dp"
+        android:layout_height="45sp"
+        android:layout_margin="16sp"
+        android:autofillHints="@null"
+        android:background="@drawable/post_input_shape"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgImage" />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_margin="16sp"
+        android:autofillHints="@null"
+        android:background="@drawable/post_input_shape"
+        android:gravity="start"
+        android:hint="@string/description"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtName" />
+
+    <TextView
+        android:id="@+id/txtCreate"
+        android:layout_width="0dp"
+        android:layout_height="45sp"
+        android:layout_margin="16sp"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:text="@string/create"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtDescription" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

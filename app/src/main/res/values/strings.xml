@@ -1,0 +1,294 @@
+<resources>
+    <string name="app_name">UTripod</string>
+    <string name="sign_in">Sign in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="reset"><u>Reset</u></string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up"><u>Sign up</u></string>
+    <string name="account">Account</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="phone">Phone</string>
+    <string name="location">Location</string>
+    <string name="search_your_location">Search your location</string>
+    <string name="cancel">Cancel</string>
+    <string name="location_name">Location Name</string>
+    <string name="region">Region</string>
+
+
+    <string-array name="profession">
+        <item>A Public viewer</item>
+        <item>Actor</item>
+        <item>Actress</item>
+        <item>Art director</item>
+        <item>Assistant director</item>
+        <item>Audio Grapher</item>
+        <item>Camera operators</item>
+        <item>Choreographer</item>
+        <item>Cinema drivers</item>
+        <item>Cinematographer</item>
+        <item>Comedians</item>
+        <item>Costume designer</item>
+        <item>Dancer</item>
+        <item>Director</item>
+        <item>Dubbing artists</item>
+        <item>Editor</item>
+        <item>Film equipments</item>
+        <item>Jr.Artist</item>
+        <item>Makeup man</item>
+        <item>Music director</item>
+        <item>Nagara</item>
+        <item>Painters</item>
+        <item>Photographer</item>
+        <item>Poster designing</item>
+        <item>Producer</item>
+        <item>Production assistants</item>
+        <item>Production executive</item>
+        <item>Singer</item>
+        <item>Studio workers</item>
+        <item>Stunt director</item>
+        <item>Stunt artists</item>
+        <item>Writers</item>
+    </string-array>
+    <string-array name="india_states">
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Pondicherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttaranchal</item>
+        <item>Uttar Pradesh</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Age</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>100</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="date">date</string>
+    <string name="lorem_ipsum_dollar_summit">lorem ipsum dollar summit</string>
+    <string name="tags_and_hashtags">#Tags_and_HashTags</string>
+    <string name="_0">0</string>
+    <string name="promoted">Sponsored content</string>
+    <string name="post">post</string>
+    <string name="what_s_on_your_mind">What\'s on your mind?</string>
+    <string name="tags">#tags</string>
+    <string name="promote">Promote</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="tag_friends">Tag friends</string>
+    <string name="search_user">Search user</string>
+    <string name="search_message">Search chats</string>
+    <string name="share">Share</string>
+    <string name="report">Report</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="profile">Profile</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="save_changes">Save changes</string>
+    <string name="first_name">First name</string>
+    <string name="edit_bio">Edit Bio</string>
+    <string name="enter_password_to_confirm">Enter password to confirm</string>
+    <string name="change_password">Change Password</string>
+    <string name="new_password">New Password</string>
+    <string name="update">Update</string>
+    <string name="old_password">Old Password</string>
+    <string name="promote_to_selected_region">Promote to selected region</string>
+    <string name="promote_to_all_regions">Promote to all regions</string>
+    <string name="price_rs_50">Price : Rs:50</string>
+    <string name="days">Days</string>
+    <string name="Razorpay_API_key">rzp_live_kvgchGZT61e3Fn</string>
+    <string name="add_a_comment">Add a comment…</string>
+    <string name="comment">comment</string>
+    <string name="reply">Reply</string>
+    <string name="an_otp_is_send_to_91_1234567890">An OTP is send to +91 1234567890</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify">Verify</string>
+    <string name="resends_in_30s">Resends in 30s</string>
+    <string name="resend">Resend</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="no_chats_found">No chats found!</string>
+    <string name="create_group">Create Group</string>
+    <string name="description">Description</string>
+    <string name="create">Create</string>
+    <string name="type_your_message">Type your message</string>
+    <string name="message">Message</string>
+    <string name="participants_n">Participants (N)</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="leave">Leave</string>
+    <string name="add_people">Add People</string>
+    <string name="edit_group">Edit Group</string>
+    <string name="group_description">Group Description</string>
+    <string name="search">Search</string>
+    <string name="chat">Chat</string>
+    <string name="uvis">Uvis</string>
+    <string name="trending_post_s">Trending Post\'s</string>
+    <string name="hashtag">#hashtag</string>
+    <string name="_15s">15s</string>
+    <string name="processing">Processing</string>
+    <string name="start_time_0">Start time : 0</string>
+    <string name="_5s">5s</string>
+    <string name="_10s">10s</string>
+    <string name="start">Start</string>
+    <string name="music_name">Music name</string>
+    <string name="use">Use</string>
+    <string name="enter_description">Enter description</string>
+    <string name="notifications">Notifications</string>
+    <string name="group_name">Group name</string>
+    <string name="join">Join</string>
+    <string name="made_in_india">Made In India</string>
+    <string name="sign_up_">SIGN UP</string>
+    <string name="enter_bio">Enter bio</string>
+    <string name="submit">Submit</string>
+    <string name="download">Download</string>
+    <string name="my_promotions">My promotions</string>
+    <string name="blocked_users">Blocked Users</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="social_media_links">Social media links</string>
+    <string name="logout">Logout</string>
+    <string name="reset_">RESET</string>
+    <string name="set_a_profile_photo">Set a profile photo</string>
+    <string name="full_name">Full name</string>
+    <string name="hide_this_post">Hide this post</string>
+    <string name="save">Save</string>
+    <string name="linkedin_link">Linkedin link</string>
+    <string name="twitter_link">Twitter link</string>
+    <string name="youtube_link">Youtube link</string>
+    <string name="instagram_link">Instagram link</string>
+    <string name="facebook_link">Facebook link</string>
+    <string name="no_promotions_found">No promotions found!</string>
+    <string name="u_search">U - Search</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="promote_duration_in_days">Promote duration in days :</string>
+    <string name="promote_in_selected_region">Promote in Selected Region</string>
+    <string name="promote_in_selected_city">Promote in Selected City</string>
+    <string name="promote_all_over_india">Promote All Over India</string>
+    <string name="state">State</string>
+    <string name="promote_in_selected_location">Promote in selected location</string>
+    <string name="active_users">Active users</string>
+    <string name="no_active_users">No active users</string>
+    <string name="comments">Comments</string>
+    <string name="follow">Follow</string>
+    <string name="privacy_and_terms">Privacy and terms &amp; conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_use">Terms Of Use</string>
+    <string name="terms_text"><![CDATA["<p>TERMS OF USE :<br /> We agree to provide you with the Utripod Service. The Service includes all of the Utripod<br /> features, services, technologies that we provide to advance Utripod mission: To bring you closer<br /> to the people and things you love. The Service is made up of the following aspects:<br /> Offering personalised opportunities to create, connect, communicate and share. People are<br /> different. We want to strengthen your talents through shared experiences that you actually care<br /> about it. So we build systems that try to understand who and what you and others care about,<br /> and use that information to help you create, find, join and share in experiences that matter to<br /> you. Part of that is highlighting content, features, offers that you might be interested in, and<br /> offering ways for you to experience Utripod, based on things that you and others do on Utripod.<br /> Fostering a positive, inclusive and safe environment. We develop and use tools and offer<br /> resources to our users that help to make their experiences positive and inclusive, including<br /> when we think they might need help. We also have teams and systems that work to combat<br /> abuse and breaches of our Terms and Policies, as well as harmful and deceptive behaviour. We<br /> use all the information we have &ndash; including your information &ndash; to try to keep our platform secure.<br /> Developing and using technologies that help us consistently serve our growing community.<br /> Organising and analysing information for our growing community is central to our Service. A big<br /> part of our Service is creating and using cutting-edge technologies that help us personalise,<br /> protect and improve our Service on an incredibly large scale for a broad global community.<br /> Technologies such as artificial intelligence and machine learning give us the power to apply<br /> complex processes across our Service. Automated technologies also help us to ensure the<br /> functionality and integrity of our Service.<br /> We use the information we have to study our Service and collaborate with others on research to<br /> make our Service better and contribute to the well-being of our community.<br /> Research and innovation.<br /> We show you relevant and useful ads without telling advertisers who you are. We don&#39;t sell your<br /> personal data. We allow advertisers to tell us things such as their business goal and the kind of<br /> audience they want to see their ads. We then show their ad to people who might be interested.<br /> We also provide advertisers with reports about the performance of their ads to help them<br /> understand how people are interacting with their content on and off Utripod.<br /> You may see branded content on Utripod posted by account holders who promote their products<br /> or services based on a commercial relationship with the business partner mentioned in their<br /> content.THE DATA POLICY:<br /> Providing our Service requires collecting and using your information. The Data Policy explains<br /> how we collect, use and share information across our community. It also explains the many<br /> ways in which you can control your information, including in the Utripod privacy and security<br /> settings. You must agree to the Data Policy to use Utripod.<br /> YOUR COMMITMENTS:<br /> Who can use Utripod. We want our Service to be as open and inclusive as possible, but we<br /> also want it to be safe, secure and in accordance with the law. So, we need you to commit to a<br /> few restrictions in order to be part of the utripod.<br /> You must be at least 10 years old or the minimum legal age in your country to use utripod.<br /> You must not be prohibited from receiving any aspect of our Service under applicable laws or<br /> engaging in payments-related Services if you are on an applicable denied party listing.<br /> We must not have previously disabled your account for violation of law or any of our policies.<br /> You must not be a convicted sex offender.<br /> HOW YOU CANNOT NOT USE UTRIPOD:<br /> You can&#39;t impersonate others or provide inaccurate information. You don&#39;t have to disclose your<br /> identity on Utripod, but you must provide us with accurate and up-to-date information (including<br /> registration information), which may include providing personal data. Also, you may not<br /> impersonate someone or something you aren&#39;t, and you can&#39;t create an account for someone<br /> else unless you have their express permission.<br /> You can&#39;t do anything unlawful, misleading or fraudulent or for an illegal or unauthorised<br /> purpose.<br /> You can&#39;t violate (or help or encourage others to violate) these Terms or our policies, including in<br /> particular the Utripod Guidelines, Utripod Platform Terms and Developer Policies and Music<br /> Guidelines. If you post branded content, you must comply with our Branded Content Policies,<br /> which require you to use our branded content tool. Learn how to report conduct or content in our<br /> Help Centre.<br /> You can&#39;t do anything to interfere with or impair the intended operation of the Service. This<br /> includes misusing any reporting, dispute or appeals channel, such as by making fraudulent or<br /> groundless reports or appeals.You can&#39;t attempt to create accounts or access or collect information in unauthorised ways. This<br /> includes creating accounts or collecting information in an automated way without our express<br /> permission.<br /> You can&#39;t sell, licence or purchase any account or data obtained from us or our Service. This<br /> includes attempts to buy, sell or transfer any aspect of your account (including your username);<br /> solicit, collect or use login credentials or badges of other users; or request or collect Instagram<br /> usernames, passwords or misappropriate access tokens.<br /> You can&#39;t post someone else&#39;s private or confidential information without permission or do<br /> anything that violates someone else&#39;s rights, including intellectual property rights (e.g. copyright<br /> infringement, trademark infringement, counterfeit or pirated goods).You may use someone<br /> else&#39;s works under exceptions or limitations to copyright and related rights under applicable law.<br /> You represent that you own or have obtained all necessary rights to the content you post or<br /> share. Learn more, including how to report content that you think infringes your intellectual<br /> property rights, here.<br /> You can&#39;t modify, translate, create derivative works of or reverse engineer our products or their<br /> components.<br /> You can&#39;t use a domain name or URL in your username without our prior written consent.<br /> Permissions you give to us. As part of our agreement, you also give us permissions that we<br /> need to provide the Service.<br /> We do not claim ownership of your content, but you grant us a licence to use it. Nothing is<br /> changing about your rights in your content. We do not claim ownership of your content that you<br /> post on or through the Service and you are free to share your content with anyone else,<br /> wherever you choose. However, we need certain legal permissions from you (known as a<br /> &quot;licence&quot;) to provide the Service. When you share, post or upload content that is covered by<br /> intellectual property rights (such as photos or videos) on or in connection with our Service, you<br /> hereby grant to us a non-exclusive, royalty-free, transferable, sub-licensable, use, distribute,<br /> modify, run, copy, publicly perform or display, translate and create derivative works of your<br /> content (consistent with your privacy and application settings). This licence will end when your<br /> content is deleted from our systems. You can delete content individually or all at once by<br /> deleting your account. To learn more about how we use information, and how to control or<br /> delete your content, review the Data Policy and visit the Utripod Help Centre.<br /> Permission to use your username, profile picture and information about your relationships and<br /> actions with accounts, ads and sponsored content. You give us permission to show your<br /> username, profile picture and information about your actions (such as likes) or relationships<br /> (such as follows) next to or in connection with accounts, ads, offers and other sponsored<br /> content that you follow or engage with that are displayed on Utripod without any compensation<br /> to you. For example, we may show that you liked a sponsored post created by a brand that has<br /> paid us to display its ads on Utripod. As with actions on other content and follows of otheraccounts, actions on sponsored content and follows of sponsored accounts can be seen only by<br /> people who have permission to see that content or follow. We will also respect your ad settings.<br /> You can learn more here about your ad settings.<br /> You agree that we can download and install updates to the Service on your device.<br /> ADDITIONAL RIGHTS WE RETAIN :<br /> If you select a username or similar identifier for your account, we may change it if we believe it<br /> is appropriate or necessary (for example, if it infringes someone&#39;s intellectual property or<br /> impersonates another user).<br /> If you use content covered by intellectual property rights that we have and make available in our<br /> Service (for example, images, designs, videos, or sounds we provide that you add to content<br /> you create or share), we retain all rights to our content (but not yours).<br /> You can only use our intellectual property and trademarks or similar marks as expressly<br /> permitted by our Brand Guidelines or with our prior written permission.<br /> You must obtain written permission from us or under an open-source licence to modify, create<br /> derivative works of, decompile or otherwise attempt to extract source code from us.<br /> Content removal and disabling or terminating your account:<br /> We can remove any content or information that you share on the Service if we believe that it<br /> violates these Terms of Use, our policies (including our Utripod Guidelines) or we are permitted<br /> or required to do so by law. We can refuse to provide or stop providing all or part of the Service<br /> to you immediately to protect our community or services, or if you create risk or legal exposure<br /> for us, violate these Terms of Use or our policies (including our Utripod Guidelines), if you<br /> repeatedly infringe other people&#39;s intellectual property rights, or where we are permitted or<br /> required to do so by law. We can also terminate or change the Service, remove or block content<br /> or information shared on our Service, or stop providing all or part of the Service if we determine<br /> that doing so is reasonably necessary to avoid or mitigate adverse legal or regulatory impacts<br /> on us. If you believe that your account has been terminated in error, or you want to disable or<br /> permanently delete your account, consult our Help Centre. When you request to delete content<br /> or your account, the deletion process will automatically begin no more than 30 days after your<br /> request. It may take up to 90 days to delete content after the deletion process begins. While<br /> the deletion process for such content is being undertaken, the content is no longer visible to<br /> other users, but remains subject to these Terms of Use and our Data Policy. After the content is<br /> deleted, it may take us up to another 90 days to remove it from backups and disaster recovery<br /> systems.Content will not be deleted within 90 days of the account deletion or content deletion process<br /> beginning in the following situations:<br /> where your content has been used by others in accordance with this licence and they have not<br /> deleted it (in which case this licence will continue to apply until that content is deleted); or<br /> where deletion within 90 days is not possible due to technical limitations of our systems, in<br /> which case, we will complete the deletion as soon as technically feasible; or<br /> where deletion would restrict our ability to:<br /> investigate or identify illegal activity or violations of our terms and policies (for example, to<br /> identify or investigate misuse of our products or systems);<br /> protect the safety and security of our products, systems and users;<br /> comply with a legal obligation, such as the preservation of evidence; or<br /> comply with a request of a judicial or administrative authority, law enforcement or a government<br /> agency;<br /> in which case, the content will be retained for no longer than is necessary for the purposes for<br /> which it has been retained (the exact duration will vary on a case-by-case basis).<br /> If you delete or we disable your account, these Terms shall terminate as an agreement between<br /> you and us, but this section and the section below called &quot;Our Agreement and What Happens if<br /> We Disagree&quot; will still apply even after your account is terminated, disabled or deleted.<br /> Our agreement and what happens if we disagree<br /> Our agreement :<br /> Your use of music on the Service is also subject to our Music Guidelines, Utripod Platform<br /> Terms and Developer Policies. If you use certain other features or related services, additional<br /> terms will be made available and will also become a part of our agreement. For example, if you<br /> use payment features, you will be asked to agree to the Community Payment Terms. If any of<br /> those terms conflict with this agreement, those other terms will govern.<br /> If any aspect of this agreement is unenforceable, the rest will remain in effect.<br /> Any amendment or waiver to our agreement must be in writing and signed by us. If we fail to<br /> enforce any aspect of this agreement, it will not be a waiver.<br /> We reserve all rights not expressly granted to youWho has rights under this agreement :<br /> This agreement does not give rights to any third parties.<br /> You cannot transfer your rights or obligations under this agreement without our consent.<br /> Our rights and obligations can be assigned to others. For example, this could occur if our<br /> ownership changes (as in a merger, acquisition or sale of assets) or by law.<br /> Who is responsible if something happens :<br /> Our Service is provided &quot;as is&quot;, and we can&#39;t guarantee that it will be safe and secure or will<br /> work perfectly all the time. TO THE EXTENT PERMITTED BY LAW, WE ALSO DISCLAIM ALL<br /> WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING THE IMPLIED<br /> WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE<br /> AND NON-INFRINGEMENT.<br /> We also don&#39;t control what people and others do or say, and we aren&#39;t responsible for their (or<br /> your) actions or conduct (whether online or offline) or content (including unlawful or<br /> objectionable content). We also aren&#39;t responsible for services and features offered by other<br /> people or companies, even if you access them through our Service.<br /> Our responsibility for anything that happens on the Service (also called &quot;liability&quot;) is limited as<br /> much as the law will allow. If there is an issue with our Service, we can&#39;t know what all the<br /> possible impacts might be. You agree that we won&#39;t be responsible (&quot;liable&quot;) for any lost profits,<br /> revenues, information or data, or consequential, special, indirect, exemplary, punitive or<br /> incidental damages arising out of or related to these Terms, even if we know that they are<br /> possible. This includes when we delete your content, information or account.<br /> We always appreciate feedback or other suggestions, but may use them without any restrictions<br /> or obligation to compensate you for them, and are under no obligation to keep them confidential.<br /> Updating these Terms<br /> We may change our Service and Policies, and we may need to make changes to these Terms<br /> so that they accurately reflect our Service and Policies. Unless otherwise required by law, we<br /> will notify you (for example, through our Service) before we make changes to these Terms and<br /> give you an opportunity to review them before they go into effect. Then, if you continue to use<br /> the Service, you will be bound by the updated Terms.</p> "]]></string>
+    <string name="privacy_text"><![CDATA["<p>UTRIPOD PRIVACY POLICY :<br /> Share videos, photos, and fun moments with the friends you love<br /> Utripod makes you closer to the people and things you love. Connect with<br /> people, share videos and photos of what you&rsquo;re up to, or see what&#39;s new from<br /> others all over the india. Explore your social community.<br /> UVIS - UTIPOD VIDEOS<br /> Uvis Utripod videos feature is a new way to create and share short videos on<br /> Utripod. You can see, like, comment, and interact with all Utripod videos (UVIS) in<br /> a created space in Explore for free.<br /> * Use special camera effects to bring your video to shine, including background<br /> music, background filters<br /> * Upload your creative video clips and get famous<br /> * You can see lots of videos<br /> * Watch &amp; share any UVIS with your friends and community<br /> U-CHAT (Message your friends in Direct)<br /> * Start fun conversations about what you see on Utripod and Uvis<br /> * Share photos and videos privately with your friends and have conversations<br /> * Receive notifications when you receive a chat messagePost photos and videos to your Utripod<br /> * Upload photos from your phone library or take pictures straight from your<br /> camera and share them with your followers<br /> * Post short videos or photo updates from moments in your life<br /> * Receive notifications when someone likes or comments on your post<br /> Learn More About Your Interests<br /> * Follow your favorite bands, celebrities, actors, athletes, and singers for live<br /> updates<br /> * Watch skits, movie scenes, news updates, music performances, sports<br /> highlights, and more from your favorite people<br /> * Get inspired by photos and videos from new accounts<br /> * Discover new talents with specific categories<br /> Advanced search<br /> * By advanced search you can search people with the talents you need<br /> * All film based categories and business categories people are available here<br /> * You can also search people with their usernames<br /> U-TAG (HASHTAGS)<br /> Using hashtags to categorize you based on your content by keyword<br /> People use the hashtag symbol (#) before a relevant keyword or phrase in their<br /> utripod to categorize their posts and help them show more easily in advanced<br /> search.<br /> Clicking or tapping on a hashtagged word in any message shows you other posts<br /> that include that hashtag.<br /> Hashtags can be included anywhere in your post<br /> Hashtagged words that become very popular are often trending topics.Personal safety<br /> * From our platform (UTRIPOD) if you get film based projects or any other<br /> projects and if you want to go outside and meet personally anyone you need to<br /> go with your guardian if not it is taken under into your own risk and if anything<br /> wrong happen it is only your mistake and we will not interfere in this<br /> Safety and Security<br /> We collect only limited information, including username, password, phone<br /> number, mail and birth date.<br /> We may also collect certain information automatically from the user&rsquo;s device,<br /> including internet or other network activity information such as device ID, IP<br /> address, web browser type and version, country-level location, as well as certain<br /> app activity data, such as video watches, time in the app, and general usage data.<br /> How we use your information<br /> We use the information we collect in various ways, including to:<br /> Provide, operate, and maintain our website<br /> Improve, personalize, and expand our website<br /> Understand and analyze how you use our website<br /> Develop new products, services, features, and functionalityCommunicate with you, either directly or through one of our partners, including<br /> for customer service, to provide you with updates and other information relating<br /> to the website, and for marketing and promotional purposes<br /> Send you emails<br /> Find and prevent fraud<br /> How do we share the information we collect?<br /> We share the information we collect with our corporate group and with service<br /> providers as necessary for them to perform a business purpose, professional<br /> service, or technology support function for us.<br /> We may disclose personal information if permitted or required by law (i) in<br /> response to a court order or a subpoena; (ii) in response to a law enforcement or<br /> public agency&rsquo;s (including schools or children services) request; (iii) if we believe<br /> disclosure may prevent the instigation of a crime, facilitate an investigation<br /> related to public safety or protect the safety of Younger Users using our sites or<br /> applications; (iv) to protect the security or integrity of our sites, applications, and<br /> other technology, as well as the technology of our service providers; or (v) enable<br /> us to take precautions against liability.<br /> The security of your information<br /> We take steps to ensure that your information is treated securely and in<br /> accordance with this policy. Unfortunately, the transmission of information via the<br /> internet is not completely secure. Although we will do our best to protect your<br /> information, for example, by encryption, we cannot guarantee the security of your<br /> information transmitted through the Platform; any transmission is at your own<br /> risk.<br /> We have appropriate technical and organizational measures to ensure a level of<br /> security appropriate to the risk of varying likelihood and severity for the rights<br /> and freedoms of you and other users. We maintain these technical and<br /> organizational measures and will amend them from time to time to improve the<br /> overall security of our systems.<br /> UTRIPOD does not sell the information of Younger Users to third parties.</p> "]]></string>
+
+
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/post_background_promotion"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        android:background="@drawable/round_image"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/imgMore"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="@id/imgProfile" />
+
+    <TextView
+        android:id="@+id/txtProfession"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/date"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/imgMore"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/txtUsername" />
+
+    <TextView
+        android:id="@+id/sponsered"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/promoted"
+        android:textColor="@color/active"
+        app:layout_constraintEnd_toStartOf="@id/imgMore"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/txtProfession" />
+
+    <ImageView
+        android:id="@+id/imgMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="?actionBarItemBackground"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_more_horiz_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grey" />
+
+    <TextView
+        android:id="@+id/txtPost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:text="@string/lorem_ipsum_dollar_summit"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sponsered" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHashtags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPost" />
+
+    <ImageView
+        android:id="@+id/imgLike"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_diamond_white"
+        app:layout_constraintEnd_toStartOf="@id/imgComment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvHashtags"
+        />
+
+    <ImageView
+        android:id="@+id/imgComment"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/comment"
+        app:layout_constraintEnd_toStartOf="@id/imgShare"
+        app:layout_constraintStart_toEndOf="@id/imgLike"
+        app:layout_constraintTop_toBottomOf="@id/rvHashtags" />
+
+    <ImageView
+        android:id="@+id/imgShare"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgComment"
+        app:layout_constraintTop_toBottomOf="@id/rvHashtags" />
+
+    <TextView
+        android:id="@+id/txtLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/imgLike"
+        app:layout_constraintStart_toStartOf="@id/imgLike"
+        app:layout_constraintTop_toBottomOf="@id/imgLike" />
+
+    <TextView
+        android:id="@+id/txtComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/imgComment"
+        app:layout_constraintStart_toStartOf="@id/imgComment"
+        app:layout_constraintTop_toBottomOf="@id/imgComment" />
+
+    <TextView
+        android:id="@+id/txtShares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/imgShare"
+        app:layout_constraintStart_toStartOf="@id/imgShare"
+        app:layout_constraintTop_toBottomOf="@id/imgShare" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
