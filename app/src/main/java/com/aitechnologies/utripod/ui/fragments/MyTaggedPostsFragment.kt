@@ -88,11 +88,15 @@ class MyTaggedPostsFragment : Fragment() {
         myTaggedPostsViewModel.userProfile.observe(viewLifecycleOwner, @ExperimentalCoroutinesApi {
             AppUtil.dismissProgress()
             if (it[0].username == requireContext().getUsername()) {
-                startActivity(Intent(requireContext(), MyProfileActivity::class.java))
+                startActivity(
+                    Intent(requireContext(), MyProfileActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
             } else {
                 startActivity(
                     Intent(requireContext(), OthersProfileActivity::class.java)
                         .putExtra("user", it[0])
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 )
             }
         })
@@ -106,7 +110,7 @@ class MyTaggedPostsFragment : Fragment() {
             startActivity(
                 Intent(requireContext(), PostCommentActivity::class.java)
                     .putExtra("id", it.id)
-                    .putExtra("username",it.username)
+                    .putExtra("username", it.username)
             )
         }
 
@@ -203,6 +207,8 @@ class MyTaggedPostsFragment : Fragment() {
                 startActivity(
                     Intent(requireContext(), TaggedUsersActivity::class.java)
                         .putExtra("list", arrayList)
+                        .putExtra("bundle", Bundle().apply { putParcelable("post",posts) })
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 )
             }
         }
@@ -211,6 +217,7 @@ class MyTaggedPostsFragment : Fragment() {
             startActivity(
                 Intent(requireContext(), ViewVideoActivity::class.java)
                     .putExtra("video", it.post)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             )
         }
 
