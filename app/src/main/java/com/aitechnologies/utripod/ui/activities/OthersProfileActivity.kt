@@ -85,7 +85,7 @@ class OthersProfileActivity : AppCompatActivity() {
 
         othersProfileViewModel.linkList.observe(this, {
             if (it.isEmpty()) {
-                binding.logocontainer.visibility = View.GONE
+                binding.logocontainer.visibility = GONE
             } else {
                 socialLinks = it[0]
                 binding.logocontainer.visibility = VISIBLE
@@ -115,7 +115,7 @@ class OthersProfileActivity : AppCompatActivity() {
             }
         })
 
-        othersProfileViewModel.blockOrUnblock.observe(this,{
+        othersProfileViewModel.blockOrUnblock.observe(this, {
             shortToast(it)
             dismissProgress()
         })
@@ -147,8 +147,8 @@ class OthersProfileActivity : AppCompatActivity() {
         }
 
         binding.menu.setOnClickListener {
-            val bottomSheetDialog = BottomSheetDialog(this,R.style.bottom_sheet_dialog_theme)
-            val view = inflate(this,R.layout.others_settings_bottom_sheet,null)
+            val bottomSheetDialog = BottomSheetDialog(this, R.style.bottom_sheet_dialog_theme)
+            val view = inflate(this, R.layout.others_settings_bottom_sheet, null)
             val share = view.findViewById<LinearLayoutCompat>(R.id.share)
             val block = view.findViewById<LinearLayoutCompat>(R.id.block)
 
@@ -161,7 +161,10 @@ class OthersProfileActivity : AppCompatActivity() {
                     Intent.createChooser(
                         Intent().apply {
                             action = Intent.ACTION_SEND
-                            putExtra(Intent.EXTRA_TEXT, "https://utripod.page.link/user/${users.username}")
+                            putExtra(
+                                Intent.EXTRA_TEXT,
+                                "https://utripod.page.link/user/${users.username}"
+                            )
                             type = "text/plain"
                         },
                         "Share to"
@@ -171,25 +174,27 @@ class OthersProfileActivity : AppCompatActivity() {
 
             block.setOnClickListener {
                 bottomSheetDialog.dismiss()
-                showProgress("Loading...",false)
-                othersProfileViewModel.blockOrUnblock(users.username,getUsername())
+                showProgress("Loading...", false)
+                othersProfileViewModel.blockOrUnblock(users.username, getUsername())
             }
 
         }
 
-        othersProfileViewModel.usernameList.observe(this,{
+        othersProfileViewModel.usernameList.observe(this, {
             dismissProgress()
-            startActivity(Intent(this,ViewUsersActivity::class.java)
-                .putExtra("usernameList",it))
+            startActivity(
+                Intent(this, ViewUsersActivity::class.java)
+                    .putExtra("usernameList", it)
+            )
         })
 
         binding.following.setOnClickListener {
-            showProgress("Loading...",false)
+            showProgress("Loading...", false)
             othersProfileViewModel.getFollowings(users.username)
         }
 
         binding.followers.setOnClickListener {
-            showProgress("Loading...",false)
+            showProgress("Loading...", false)
             othersProfileViewModel.getFollowers(users.username)
         }
 
@@ -198,9 +203,9 @@ class OthersProfileActivity : AppCompatActivity() {
     private fun viewLink(url: String) {
         startActivity(Intent().apply {
             action = Intent.ACTION_VIEW
-            data =  if (url.startsWith("http://",true) || url.startsWith("https://")){
+            data = if (url.startsWith("http://", true) || url.startsWith("https://")) {
                 Uri.parse(url)
-            }else{
+            } else {
                 Uri.parse("https://$url")
             }
         })
@@ -224,8 +229,8 @@ class OthersProfileActivity : AppCompatActivity() {
         binding.followingnumber.text = users.following.toString()
         binding.profession.text = users.profession
         binding.city.text = users.location
-        if (!users.isVerified)
-            binding.verifed.visibility = INVISIBLE
+        if (users.isVerified)
+            binding.verifed.visibility = VISIBLE
         Glide.with(applicationContext)
             .load(users.profileUrl)
             .error(R.drawable.ic_baseline_person_24)

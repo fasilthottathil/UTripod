@@ -1,6 +1,8 @@
 package com.aitechnologies.utripod.ui.activities
 
 import android.Manifest
+import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -18,6 +20,7 @@ import com.aitechnologies.utripod.ui.viewModels.MainProvider
 import com.aitechnologies.utripod.ui.viewModels.MainViewModel
 import com.aitechnologies.utripod.util.AppUtil.Companion.shortToast
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
@@ -70,6 +73,21 @@ class MainActivity : AppCompatActivity() {
                 )
             }
         }
+
+        mainViewModel.blocked.observe(this,{
+            if (it){
+                AlertDialog.Builder(this).apply {
+                    setTitle("Account Un-Accessible")
+                    setMessage("You account was blocked because of un-usual activity detected")
+                    setCancelable(false)
+                    setNegativeButton("Exit") { d, _ ->
+                        d.cancel()
+                        finish()
+                        exitProcess(0)
+                    }
+                }.create().show()
+            }
+        })
 
 
         binding.txtCancel.setOnClickListener { binding.layoutAdd.visibility = INVISIBLE }

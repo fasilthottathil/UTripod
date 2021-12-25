@@ -68,8 +68,8 @@ class MyProfileFragment : Fragment() {
                 binding.followingnumber.text = users.following.toString()
                 binding.profession.text = users.bio
                 binding.city.text = users.location
-                if (!users.isVerified)
-                    binding.verifed.visibility = INVISIBLE
+                if (users.isVerified)
+                    binding.verifed.visibility = VISIBLE
                 Glide.with(requireContext())
                     .load(users.profileUrl)
                     .error(R.drawable.ic_baseline_person_24)

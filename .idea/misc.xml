@@ -11,10 +11,12 @@
         <entry key="app/src/main/res/layout/activity_post_comment.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/activity_post_comment_reply.xml" value="0.1882051282051282" />
         <entry key="app/src/main/res/layout/activity_privacy_and_terms.xml" value="0.18703703703703703" />
+        <entry key="app/src/main/res/layout/activity_promote_post.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/layout/activity_tagged_users.xml" value="0.1388888888888889" />
         <entry key="app/src/main/res/layout/activity_uvis_single.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/activity_view_image.xml" value="0.16574074074074074" />
         <entry key="app/src/main/res/layout/activity_view_users.xml" value="0.19114583333333332" />
+        <entry key="app/src/main/res/layout/activity_view_video.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/fragment_add.xml" value="0.14629629629629629" />
         <entry key="app/src/main/res/layout/fragment_chats.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/fragment_my_chats.xml" value="0.17222222222222222" />

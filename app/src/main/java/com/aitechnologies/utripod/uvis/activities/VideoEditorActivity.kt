@@ -56,12 +56,29 @@ class VideoEditorActivity : AppCompatActivity() {
             TimeUnit.MILLISECONDS.toSeconds(intent.getIntExtra("start_time", 0).toLong()).toString()
         musicPath = intent.getStringExtra("music_uri").toString()
 
-        MediaPlayer.create(this, Uri.fromFile(File(videoPath))).also {
-            duration = TimeUnit.MILLISECONDS.toSeconds(it.duration.toLong()).toString()
-            it.reset()
-            it.release()
-        }
+        try {
+            MediaPlayer.create(this, Uri.fromFile(File(videoPath))).also {
+                duration = TimeUnit.MILLISECONDS.toSeconds(it.duration.toLong()).toString()
+                it.reset()
+                it.release()
+            }
+        } catch (e: Exception) {
+            val player = ExoPlayer.Builder(this)
+                .build()
+            player.playWhenReady = false
+            player.addMediaItem(MediaItem.fromUri(Uri.fromFile(File(videoPath))))
+            player.prepare()
+            player.addListener(object :Player.Listener{
+                override fun onPlaybackStateChanged(playbackState: Int) {
+                    super.onPlaybackStateChanged(playbackState)
+                    if (playbackState == ExoPlayer.STATE_READY){
+                        duration = player.duration.toString()
+                        player.release()
+                    }
+                }
+            })
 
+        }
 
 
         if (intent.getStringExtra("music_uri").toString().isNotEmpty()) {
@@ -137,13 +154,13 @@ class VideoEditorActivity : AppCompatActivity() {
                 null,
                 newFile.absolutePath,
                 null,
-                object :CompressionListener{
+                object : CompressionListener {
                     override fun onCancelled() {
 
                     }
 
                     override fun onFailure(failureMessage: String) {
-                        Log.d("COMPRESS",failureMessage)
+                        Log.d("COMPRESS", failureMessage)
 
                     }
 
