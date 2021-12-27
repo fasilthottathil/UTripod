@@ -22,7 +22,6 @@ import com.aitechnologies.utripod.ui.activities.TrendingPostActivity
 import com.aitechnologies.utripod.ui.viewModels.ChatsProvider
 import com.aitechnologies.utripod.ui.viewModels.ChatsViewModel
 import com.aitechnologies.utripod.util.AppSharedPreference.Companion.getUsername
-import com.aitechnologies.utripod.util.AppUtil.Companion.shortToast
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -60,7 +59,6 @@ class ChatsFragment : Fragment() {
                         if (it.data!!.isEmpty()) {
                             binding.txtNoActive.visibility = VISIBLE
                         } else {
-                            requireActivity().shortToast("hei")
                             binding.txtNoActive.visibility = INVISIBLE
                             binding.activeUsers.apply {
                                 setHasFixedSize(true)
@@ -75,7 +73,6 @@ class ChatsFragment : Fragment() {
                         }
                     }
                     "no users" -> {
-                        requireActivity().shortToast("hei")
                         binding.txtNoActive.visibility = VISIBLE
                     }
                 }

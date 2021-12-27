@@ -112,8 +112,8 @@ class MyGroupsFragment : Fragment() {
         binding.fabAdd.visibility = VISIBLE
     }
 
-    fun search(query:String){
-
+    fun search(query: String) {
+        myGroupsAdapter.filter.filter(query)
     }
 
     override fun onDestroyView() {

@@ -16,6 +16,7 @@ import com.aitechnologies.utripod.repository.ChatsRepository
 import com.aitechnologies.utripod.ui.activities.PrivateChatActivity
 import com.aitechnologies.utripod.ui.viewModels.MyChatsViewModel
 import com.aitechnologies.utripod.ui.viewModels.MyChatsViewModelProvider
+import com.aitechnologies.utripod.util.UTripodApp.Companion.getAppInstance
 import com.aitechnologies.utripod.util.AppSharedPreference.Companion.getUsername
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
@@ -24,7 +25,7 @@ class MyChatsFragment : Fragment() {
     private var _binding: FragmentMyChatsBinding? = null
     private val binding get() = _binding!!
     private lateinit var myChatsViewModel: MyChatsViewModel
-    private val myChatsAdapter by lazy { MyChatsAdapter(requireContext()) }
+    private val myChatsAdapter by lazy { MyChatsAdapter(getAppInstance()) }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
